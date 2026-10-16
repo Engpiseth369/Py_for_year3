@@ -1,0 +1,1 @@
+print("Srey nith som ka kvé phik")
