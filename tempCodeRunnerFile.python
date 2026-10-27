@@ -1,0 +1,33 @@
+class Student:
+    school = "Royal University"          # class attribute: shared by all students
+    student_count = 0                    # class attribute: counts all students
+
+    def __init__(self, name, age, scores):
+        self.name = name                 # instance attributes: unique to each student
+        self.age = age
+        self.scores = scores
+        Student.student_count += 1       # update the shared counter
+
+    def average(self):
+        total = sum(self.scores)         # local variable
+        return total / len(self.scores)
+
+    def introduce(self):
+        avg = self.average()             # local variable
+        print(f"{self.name}, age {self.age}, studies at {Student.school}. "
+              f"Average: {avg:.2f}")
+
+# Create students
+s1 = Student("Sophea", 20, [88, 92, 85])
+s2 = Student("Dara", 21, [72, 65, 80])
+s3 = Student("Vanna", 19, [45, 60, 55])
+
+s1.introduce()
+s2.introduce()
+s3.introduce()
+
+print("Total students:", Student.student_count)
+
+# Change the school for everyone
+Student.school = "Institute of Technology"
+s2.introduce()

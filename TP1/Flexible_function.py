@@ -1,0 +1,1 @@
+def describe(*numbers, decimals = 2,)
