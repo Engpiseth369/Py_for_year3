@@ -22,4 +22,4 @@ print(Scholar, "->",type(Scholar).__name__)
 Age = "20"
 print(type(Age))
 
-print("In Py, it does not define that the variable is in a specific type or it's modual")
+## What it tells you about dynamic typing: age was an int a moment ago, and now it’s a str, with no error and no type declaration. In Python, the type belongs to the value (the object), not to the variable name. A name is just a label that can be re-pointed at any object, so its type can change while the program runs.
